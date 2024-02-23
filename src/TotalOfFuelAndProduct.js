@@ -5,14 +5,17 @@ import { useTotalPrice } from './TotalPriceContext';
 const TotalOfFuelAndProduct = () => {
   const { totalPriceOfAll } = useTotalPrice(); 
 
-function handleButtonClick(){
 
-    alert("Total Price : "+totalPriceOfAll.toFixed(2)  +" manat")
-}
     return (
-    <div>
-      <button onClick={handleButtonClick} style={{backgroundColor:"green" ,color:"white" ,fontSize:"20px",fontWeight:"bold"}} >Calculate All Total Price</button>
-
+    <div style={{
+      color:"green",
+      fontWeight:"bold",
+      width:"200px",
+      height:"200px",
+      fontSize:"30px",
+      marginRight:"-100px"     , 
+    }}>
+      Total price of fuel is  : {totalPriceOfAll} manat
     </div>
   );
 };
